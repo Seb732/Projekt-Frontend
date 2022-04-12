@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+
+
+
+    </script>
+</head>
+
+
+<body>
+    <header>
+        <div class="header_div">
+            <nav>
+                <ul id="navbar">
+                    <li class="item" id="nav1"><a href="#" id="1">Cel i funkcje</a></li>
+                    <li class="item" id="nav2"><a href="#" id="2">Historia</a></li>
+                    <li class="item" id="nav3"><a href="#" id="3">Obecnie</a></li>
+                    <li class="item" id="nav4"><a href="#" id="4">Plany</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-main">
+        <div class="container">
+            <p>
+                Starlink to sieć satelitów firmy SpaceX na niskiej orbicie okołoziemskiej, które mają świadczyć usługi
+                dostępu niskich opóźnień do sieci Internet. Popyt na takie usługi ma pochodzić w szczególności z tych
+                obszarów naszej planety, gdzie obecnie dostęp do połączeń naziemnych jest niemożliwy lub znacznie
+                utrudniony. Firma chce z tego rodzaju usług uczynić jedno ze swoich źródeł dochodu.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if (scroll > 500) {
+            document.getElementById("navbar").style.cssText = `
+            display: inline-flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding-left: 0;
+            top: 300px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+            `;
+            document.getElementById("1").innerHTML = '<i class="fa fa-fw fa-rocket"></i>';
+            document.getElementById("2").innerHTML = '<i class="fa fa-fw fa-book">';
+            document.getElementById("3").innerHTML = '<i class="fa fa-fw fa-tasks"></i>';
+            document.getElementById("4").innerHTML = '<i class="fa fa-fw fa-line-chart"></i>';
+        }
+        else {
+            document.getElementById("navbar").style.cssText = `
+            top: 0;
+            
+            `;
+            document.getElementById("1").innerHTML = 'Cel i funkcje';
+            document.getElementById("2").innerHTML = 'Historia';
+            document.getElementById("3").innerHTML = 'Obecnie';
+            document.getElementById("4").innerHTML = 'Plany';
+        }
+
+    });
+
+</script>
+
+</html>
