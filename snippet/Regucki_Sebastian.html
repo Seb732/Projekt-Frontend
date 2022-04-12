@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Sebastian Regucki" />
+	<meta name="keywords" content="starlink, spacex" />
+	<meta name="description" content="Zbiór informacji o satelitach starlink" />
+	<title>Starlink</title>
+	<link rel="shortcut icon" href="Images/logo_starlink.png" />
+	<link rel="stylesheet" href=" Styles/styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="./skrypty.js"></script>
+</head>
+
+<body style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;" onload="zegar()">
+	<header>
+		<nav class="nav_top">
+			<div id="logo" style="padding-left: 5%;">
+				<img src="Images/logo_starlink.png" alt="logo" class="logo">
+			</div>
+			<div style="padding-left: 2%; padding-top: 2.5%;" id="nazwa_strony">Satelity starlink</div>
+			<div class="nav_links" id="navbar_nazwy" style="padding-right: 2.5%;">
+				<ul>
+					<li>
+						<a href="#1">Cel i funkcje</a>
+					</li>
+					<li>
+						<a href="#4">Historia</a>
+					</li>
+					<li>
+						<a href="#6">Obecnie</a>
+					</li>
+					<li>
+						<a href="#5">Plany</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav_links" id="navbar_ikony">
+				<ul style="list-style: none;">
+					<li>
+						<a href="#1"><i class="fa fa-fw fa-rocket"></i></a>
+					</li>
+					<li>
+						<a href="#4"><i class="fa fa-fw fa-book"></i></a>
+					</li>
+					<li>
+						<a href="#6"><i class="fa fa-fw fa-tasks"></i></a>
+					</li>
+					<li>
+						<a href="#5"><i class="fa fa-fw fa-line-chart"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="side-menu-container">
+		<nav class="side-menu">
+			<a href="#1"><i class="fa fa-fw fa-rocket"></i></a>
+			<a href="#4"><i class="fa fa-fw fa-book"></i></a>
+			<a href="#6"><i class="fa fa-fw fa-tasks"></i></a>
+			<a href="#5"><i class="fa fa-fw fa-line-chart"></i></a>
+		</nav>
+	</div>
+	<div style="padding: 0%; margin: 0%; width: 100vw; height: 100vh; position: relative;">
+		<img src="Images/starlink_lp.jpg" alt="landing_page" style="object-fit: cover;
+		 width: 100%; height: 100%; float: left;">
+	</div>
+	<div class="container-main container">
+
+		<div class="container" id="naglowek" style="padding-top: 2%; padding-bottom: 0%;">
+			<hr>
+		</div>
+		<div class="container" id="1">
+			<h1 class="header">
+				Cel i funkcje sieci Starlink</h1>
+			<p>
+				Starlink to sieć satelitów firmy SpaceX na niskiej orbicie okołoziemskiej, które mają świadczyć usługi
+				dostępu niskich opóźnień do sieci Internet. Popyt na takie usługi ma pochodzić w szczególności z tych
+				obszarów naszej planety, gdzie obecnie dostęp do połączeń naziemnych jest niemożliwy lub znacznie
+				utrudniony. Firma chce z tego rodzaju usług uczynić jedno ze swoich źródeł dochodu.
+			</p>
+			<div style="background-color: #ded8d5; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto; padding-left: 1px;
+				padding-right: 1px;
+				padding-top: 2.5%;
+				padding-bottom: 20px; border-radius: 20px;
+				margin-top: 7.5%;
+				text-align: center;">
+				<img src="Images/starlink_1.jpg" width="1000" alt="Starlinki"
+					style="display: block; margin-left: auto; margin-right: auto;">
+				<span>
+					<a href="https://ocdn.eu/images/pulscms/NzQ7MDA_/941e8f1ffc707112964cc8adec434231.jpg">
+						Źródło: SpaceX</a>
+				</span>
+
+			</div>
+		</div>
+		<div class="container" id="2">
+			<h2 class="header">Budowa i wyposażenie satelitów</h2>
+			<p>
+				Satelity są wyposażone w silnik jonowy Halla, używający kryptonu jako materiału pędnego. Mają też
+				stabilizację trójosiową i ich orientacja jest aktywnie utrzymywana, prawdopodobnie przy użyciu zestawu
+				kół
+				reakcyjnych. Informacje o orientacji dostarczają szperacze gwiazd, bazujące na technologiach
+				rozwiniętych w
+				statku Dragon.
+			</p>
+		</div>
+		<div class="container" id="3">
+			<h3 class="header">Czas pracy</h3>
+			<p>
+				Każdy z satelitów jest zaprojektowany do pracy przez 5 lat. Pod koniec życia satelita wykorzysta swój
+				napęd
+				jonowy, aby zejść z orbity i spalić się w atmosferze w przeciągu kilku miesięcy. Jeżeli satelita
+				doznałby
+				uszkodzeń uniemożliwiających zmianę jego położenia, to w przeciągu 1-5 lat zejdzie z orbity na skutek
+				oporów
+				szczątkowej atmosfery na niskiej orbicie.
+			</p>
+			<hr>
+		</div>
+		<div class="container" id="4">
+			<h1 class="header">
+				Historia budowy sieci</h1>
+			<p>
+				Pierwszy operacyjny zestaw 60 satelitów (Starlink 1) został umieszczony na orbicie 11 listopada 2019 r.
+				Operacyjne satelity różniły się od serii v0.9 posiadaniem urządzeń do komunikacji w paśmie Ka,
+				zwiększoną
+				liczbą generowanych wiązek i przepustowością. Masa satelity zwiększyła się o 33 kg do 260 kg w stosunku
+				do
+				testowej serii.
+			</p>
+			<p>
+				4 czerwca 2020 r. w ramach misji Starlink L7 na orbitę poleciał testowy satelita ze specjalną rozwijaną
+				osłoną przeciwsłoneczną. Późniejsze paczki wysyłanych Starlinków są już wszystkie wyposażone w to
+				rozwiązanie.
+			</p>
+			<hr>
+		</div>
+		<div class="container" id="5">
+			<h1 class="header">
+				Najbliższe plany</h1>
+			<div class="grid_thirds">
+				<div>
+					<p>
+						<b>
+							Zgodnie z zapowiedziami założyciela i prezesa firmy SpaceX Elona Muska w tym roku sieć
+							Starlink
+							powinna
+							osiągnąć liczbę 500 000 użytkowników.
+						</b>
+					</p>
+				</div>
+				<div class="two_third_img">
+					<img src="Images/starlink_2.png" alt="starlink 2"
+						style="display: block; margin-left: auto; margin-right: auto;">
+					<span>
+						<a
+							href="https://www.urania.edu.pl/sites/default/files/inline-images/840_472_matched__pye8p9_StarlinkScreenshot879x485.png">Źródło:
+							urania.edu.pl</a>
+					</span>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="6">
+			<h1 class="header">
+				Obecny stan</h1>
+			<p>
+				Do tej pory (stan na 1 marca 2022 r.) wysłano prawie 2100 satelitów Starlink. W tej chwili na orbitę są
+				wysyłane już satelity wersji V1.5 - nieco cięższe, bo ważące 295 kg i posiadające łącza do laserowej
+				komunikacji międzysatelitarnej. Firma SpaceX zakończyła budowę pierwszej warstwy sieci i od połowy 2021
+				r.
+				skupia się na wypełnieniu kolejnych powłok orbitalnych. W 2022 r. ma zostać wypełniona powłoka nr 4, co
+				będzie wymagać 3-4 startów miesięcznie. Z usług w testach beta korzysta już ponad 100 000 użytkowników z
+				wielu państw na świecie (w tym Polski).
+			</p>
+			<p>Ostatnie starty: </p>
+			<div class="grid_halves">
+				<div class="half">
+					<ul>
+						<li>Starlink L1 - 11 listopada 2019 r.</li>
+						<li>Starlink L2 - 7 stycznia 2020 r.</li>
+						<li>Starlink L3 - 29 stycznia 2020 r.</li>
+					</ul>
+				</div>
+				<div class="half">
+					<ol>
+						<li>Starlink 4-7 - 3 lutego 2022 r.</li>
+						<li>Starlink 4-8 - 21 lutego 2022 r.</li>
+						<li>Starlink 4-11 - 25 lutego 2022 r.</li>
+					</ol>
+				</div>
+			</div>
+			<div style="padding-top: 20px; padding-bottom: 20px;">
+				<a href="https://en.wikipedia.org/wiki/List_of_Starlink_launches">Lista
+					wszystkich startów</a>
+			</div>
+			<div style="background-color: #ded8d5; height: 500px; top: 100px; border-radius: 20px;">
+				<table>
+					<caption>Powłoki orbitalne satelitów</caption>
+					<tr>
+						<th>Nr powłoki</th>
+						<th>Oznaczenie startów</th>
+						<th>Wymiary orbity</th>
+						<th>Inklinacja orbity</th>
+						<th>Dotychczasowa liczba startów</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>LX</td>
+						<td>550 km</td>
+						<td>53 st.</td>
+						<td>28</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>2-X</td>
+						<td>570 km</td>
+						<td>70 st.</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>RX</td>
+						<td>560 km</td>
+						<td>97,6 st.</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>4-X</td>
+						<td>540 km</td>
+						<td>53,2 st.</td>
+						<td>8</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="container">
+			<p>
+				Źródło informacji: urania.edu
+			</p>
+			<hr>
+		</div>
+	</div>
+	<footer>
+		Sebastian Regucki, 2022 ©
+		<span id="zegar"></span>
+	</footer>
+</body>
+
+</html>
