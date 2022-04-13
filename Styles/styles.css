@@ -5,6 +5,8 @@
     --headerHeight: 10%;
 }
 
+
+
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: url('Fonts/NeueHaasDisplay-Light.woff') format('woff2'),
@@ -145,6 +147,14 @@ a:focus::before {
     }
 }
 
+#nav_div {
+    padding-right: 10%;
+}
+
+
+#nav {
+    float: right;
+}
 
 .container-main {
     position: relative;
@@ -155,55 +165,50 @@ a:focus::before {
     margin-left: auto;
     margin-right: auto;
     font-family: var(--font_family_main);
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 0.15fr 1fr;
-    grid-template-rows: 1fr;
     padding-top: var(--headerHeight);
-    
-}
-
-.container_idx {
-    grid-area: 1 / 1 / 2 / 2;
-    font-size: 3.5em;
-    margin: 0;
-    text-align: center;
-    font-weight: lighter;
-    color: var(--indicator_color);
-    line-height: 40px;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
 }
 
-.cotainer_content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr;
+
+.container-line {
+    border-left: 2px solid #333;
 }
 
-.container_title {
+
+
+.container{
+  position: relative;
+  padding-left: 10%;
+  padding-bottom: 15%;
+  margin-top: -2%;
+  background: transparent;
+  color: rgb(68, 67, 67);
+  text-align: justify;
+  letter-spacing: 1px;
+  max-width: 800px;
+}
+
+
+
+/* Title of the card */
+.title {
+    color: #000;
     font-size: 2em;
     font-weight: bold;
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.container_text {
-    grid-area: 2 / 1 / 3 / 2;
-    text-align: justify;
-    padding-bottom: 2%;
-    border-bottom: solid #000 2px;
-    color: rgb(68, 67, 67);
-    letter-spacing: 1px;
-}
-
-#nav_div {
-    padding-right: 10%;
 }
 
 
-#nav {
-    float: right;
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    top: 10px;
+    left: -9px;
+    border: 3px solid var(--indicator_color);
 }

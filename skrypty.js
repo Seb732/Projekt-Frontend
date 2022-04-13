@@ -1,3 +1,5 @@
+
+
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll > 200) {
@@ -45,9 +47,9 @@ $(window).scroll(function (event) {
 });
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#footer');
-	var element2 = document.querySelector('#cont1');
+
 	var position = element.getBoundingClientRect();
-	var position2 = element2.getBoundingClientRect();
+
 
 	if(position.top < window.innerHeight && position.bottom >= 0) {
         document.getElementById("footer_div").style.cssText = `
@@ -60,17 +62,4 @@ window.addEventListener('scroll', function() {
         opacity:0;
         `;
     }
-
-    if(position2.top < window.innerHeight && position2.bottom >= 0) {
-        document.getElementById("cont1").style.cssText = `
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-        `;
-	}
-    else{
-        document.getElementById("cont1").style.cssText = `
-        opacity:0;
-        `;
-    }
-
 });
