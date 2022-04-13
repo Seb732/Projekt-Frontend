@@ -1,6 +1,6 @@
 :root {
     --header_footer_bg: #212121;
-    --indicator_color: #2666CF;
+    --indicator_color: rgb(243, 98, 31);
     --font_family_main: 'Neue Haas Grotesk Display Pro';
     --headerHeight: 10%;
 }
@@ -31,6 +31,8 @@ header {
     font-style: normal;
     font-display: swap;
     box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+    font-size: 14px;
+    font-weight: 900;
 }
 
 footer {
@@ -76,9 +78,7 @@ li>a {
     padding: 16px 0;
     margin: 0 12px;
     letter-spacing: 1px;
-    font-size: 12px;
     line-height: 16px;
-    font-weight: 900;
     text-transform: uppercase;
     transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
     color: #fff;
@@ -162,8 +162,7 @@ a:focus::before {
     grid-template-columns: 0.15fr 1fr;
     grid-template-rows: 1fr;
     padding-top: var(--headerHeight);
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    
 }
 
 .container_idx {
@@ -172,7 +171,7 @@ a:focus::before {
     margin: 0;
     text-align: center;
     font-weight: lighter;
-    color: rgb(243, 98, 31);
+    color: var(--indicator_color);
     line-height: 40px;
     display: flex;
     align-items: flex-start;
@@ -197,6 +196,7 @@ a:focus::before {
     padding-bottom: 2%;
     border-bottom: solid #000 2px;
     color: rgb(68, 67, 67);
+    letter-spacing: 1px;
 }
 
 #nav_div {

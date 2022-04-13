@@ -40,22 +40,37 @@ $(window).scroll(function (event) {
         document.getElementById("3").innerHTML = 'Obecnie';
         document.getElementById("4").innerHTML = 'Plany';
     }
-    var observer = new IntersectionObserver(function(entries) {
-        
-        if(entries[0].isIntersecting === true){
-        
-            document.getElementById("footer_div").style.cssText = `
-            -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
-            `;
-        }
-        else{
-            document.getElementById("footer_div").style.cssText = `
-            opacity:0;
-            `;
-        }
-    }, { threshold: [0] });
     
-    observer.observe(document.querySelector("#footer"));
+    
+});
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#footer');
+	var element2 = document.querySelector('#cont1');
+	var position = element.getBoundingClientRect();
+	var position2 = element2.getBoundingClientRect();
+
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+        document.getElementById("footer_div").style.cssText = `
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        `;
+	}
+    else{
+        document.getElementById("footer_div").style.cssText = `
+        opacity:0;
+        `;
+    }
+
+    if(position2.top < window.innerHeight && position2.bottom >= 0) {
+        document.getElementById("cont1").style.cssText = `
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        `;
+	}
+    else{
+        document.getElementById("cont1").style.cssText = `
+        opacity:0;
+        `;
+    }
 
 });
