@@ -29,8 +29,8 @@ $(window).scroll(function (event) {
     else {
         document.getElementById("navbar").style.cssText = `
             positon: relative;
-            -webkit-animation: fadeInUp 1s;
-            animation: fadeInUp 1s;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
             `;
         document.getElementById("nav").style.cssText = `
             float: right; `;
@@ -45,8 +45,8 @@ $(window).scroll(function (event) {
         if(entries[0].isIntersecting === true){
         
             document.getElementById("footer_div").style.cssText = `
-            -webkit-animation: fadeInUp 1s;
-            animation: fadeInUp 1s;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
             `;
         }
         else{
@@ -56,6 +56,6 @@ $(window).scroll(function (event) {
         }
     }, { threshold: [0] });
     
-    observer.observe(document.querySelector("#t"));
+    observer.observe(document.querySelector("#footer"));
 
 });
