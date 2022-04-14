@@ -1,104 +1,173 @@
 <!DOCTYPE html>
 <html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Starlink</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="skrypty.js"></script>
+        <link rel="stylesheet" href="Styles/styles.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starlink</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="skrypty.js"></script>
-    <link rel="stylesheet" href="Styles/styles.css" />
-
-</head>
-
-<body>
-    <header>
-        <div id="nav_div">
-            <nav id="nav">
-                <ul id="navbar">
-                    <li><a href="#" id="1">Cel i funkcje</a></li>
-                    <li><a href="#" id="2">Historia</a></li>
-                    <li><a href="#" id="3">Obecnie</a></li>
-                    <li><a href="#" id="4">Plany</a></li>
-                </ul>
-            </nav>
+    <body>
+        <header>
+            <div id="nav_div">
+                <nav id="nav">
+                    <ul id="navbar">
+                        <li><a href="#" id="1">Cel i funkcje</a></li>
+                        <li><a href="#" id="2">Historia</a></li>
+                        <li><a href="#" id="3">Obecnie</a></li>
+                        <li><a href="#" id="4">Plany</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container-main" id="cl">
+            <div class="container-line">
+                <div class="container" id="container1">
+                    <span class="title">Cel i funkcje sieci Starlink</span>
+                    <p>
+                        Starlink to sieć satelitów firmy SpaceX na niskiej
+                        orbicie okołoziemskiej, które mają świadczyć usługi
+                        dostępu niskich opóźnień do sieci Internet. Popyt na
+                        takie usługi ma pochodzić w szczególności z tych
+                        obszarów naszej planety, gdzie obecnie dostęp do
+                        połączeń naziemnych jest niemożliwy lub znacznie
+                        utrudniony. Firma chce z tego rodzaju usług uczynić
+                        jedno ze swoich źródeł dochodu.
+                    </p>
+                    <span class="title2">Budowa i wyposażenie satelitów</span>
+                    <p>
+                        Satelity są wyposażone w silnik jonowy Halla, używający
+                        kryptonu jako materiału pędnego. Mają też stabilizację
+                        trójosiową i ich orientacja jest aktywnie utrzymywana,
+                        prawdopodobnie przy użyciu zestawu kół reakcyjnych.
+                        Informacje o orientacji dostarczają szperacze gwiazd,
+                        bazujące na technologiach rozwiniętych w statku Dragon.
+                    </p>
+                    <span class="title2">Czas pracy</span>
+                    <p>
+                        Każdy z satelitów jest zaprojektowany do pracy przez 5
+                        lat. Pod koniec życia satelita wykorzysta swój napęd
+                        jonowy, aby zejść z orbity i spalić się w atmosferze w
+                        przeciągu kilku miesięcy. Jeżeli satelita doznałby
+                        uszkodzeń uniemożliwiających zmianę jego położenia, to w
+                        przeciągu 1-5 lat zejdzie z orbity na skutek oporów
+                        szczątkowej atmosfery na niskiej orbicie.
+                    </p>
+                </div>
+                <div class="container" id="container2">
+                    <span class="title">Historia budowy sieci</span>
+                    <p>
+                        Pierwszy operacyjny zestaw 60 satelitów (Starlink 1)
+                        został umieszczony na orbicie 11 listopada 2019 r.
+                        Operacyjne satelity różniły się od serii v0.9
+                        posiadaniem urządzeń do komunikacji w paśmie Ka,
+                        zwiększoną liczbą generowanych wiązek i przepustowością.
+                        Masa satelity zwiększyła się o 33 kg do 260 kg w
+                        stosunku do testowej serii.
+                    </p>
+                    <p>
+                        4 czerwca 2020 r. w ramach misji Starlink L7 na orbitę
+                        poleciał testowy satelita ze specjalną rozwijaną osłoną
+                        przeciwsłoneczną. Późniejsze paczki wysyłanych
+                        Starlinków są już wszystkie wyposażone w to rozwiązanie.
+                    </p>
+                </div>
+                <div class="container" id="container3">
+                    <span class="title">Najbliższe plany</span>
+                    <p>
+                        <b>
+                            Zgodnie z zapowiedziami założyciela i prezesa firmy
+                            SpaceX Elona Muska w tym roku sieć Starlink powinna
+                            osiągnąć liczbę 500 000 użytkowników.
+                        </b>
+                    </p>
+                </div>
+                <div class="container" id="container4">
+                    <span class="title">Obecny stan</span>
+                    <p>
+                        Do tej pory (stan na 1 marca 2022 r.) wysłano prawie
+                        2100 satelitów Starlink. W tej chwili na orbitę są
+                        wysyłane już satelity wersji V1.5 - nieco cięższe, bo
+                        ważące 295 kg i posiadające łącza do laserowej
+                        komunikacji międzysatelitarnej. Firma SpaceX zakończyła
+                        budowę pierwszej warstwy sieci i od połowy 2021 r.
+                        skupia się na wypełnieniu kolejnych powłok orbitalnych.
+                        W 2022 r. ma zostać wypełniona powłoka nr 4, co będzie
+                        wymagać 3-4 startów miesięcznie. Z usług w testach beta
+                        korzysta już ponad 100 000 użytkowników z wielu państw
+                        na świecie (w tym Polski).
+                    </p>
+                    <div id="container_list">
+                        <div id="container_list_title">Ostatnie starty:</div>
+                        <div id="container_list_content">
+                            <div id="container_list1">
+                                <ul>
+                                    <li>Starlink L1 - 11 listopada 2019 r.</li>
+                                    <li>Starlink L2 - 7 stycznia 2020 r.</li>
+                                    <li>Starlink L3 - 29 stycznia 2020 r.</li>
+                                </ul>
+                            </div>
+                            <div id="container_list2">
+                                <ol>
+                                    <li>Starlink 4-7 - 3 lutego 2022 r.</li>
+                                    <li>Starlink 4-8 - 21 lutego 2022 r.</li>
+                                    <li>Starlink 4-11 - 25 lutego 2022 r.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_table">
+                        <table>
+                            <caption>
+                                Powłoki orbitalne satelitów
+                            </caption>
+                            <tr>
+                                <th>Nr powłoki</th>
+                                <th>Oznaczenie startów</th>
+                                <th>Wymiary orbity</th>
+                                <th>Dotychczasowa liczba startów</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>LX</td>
+                                <td>550 km</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2-X</td>
+                                <td>570 km</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RX</td>
+                                <td>560 km</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>4-X</td>
+                                <td>540 km</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                    </div>
+					<div id="info_source">
+						<span>Źródło informacji: urania.edu</span>
+					</div>
+                </div>
+            </div>
         </div>
-    </header>
-    <div class="container-main" id="cl">
-        <div class="container-line">
-            <div class="container">
-                <span class="title">Cel i funkcje sieci Starlink</span>
-                <p>
-                    Starlink to sieć satelitów firmy SpaceX na niskiej orbicie okołoziemskiej, które mają świadczyć
-                    usługi
-                    dostępu niskich opóźnień do sieci Internet. Popyt na takie usługi ma pochodzić w szczególności z
-                    tych
-                    obszarów naszej planety, gdzie obecnie dostęp do połączeń naziemnych jest niemożliwy lub
-                    znacznie
-                    utrudniony. Firma chce z tego rodzaju usług uczynić jedno ze swoich źródeł dochodu.
-                </p>
-            </div>
-            <div class="container">
-                <span class="title">Budowa i wyposażenie satelitów</span>
-                <p>
-                    Satelity są wyposażone w silnik jonowy Halla, używający kryptonu jako materiału pędnego. Mają
-                    też
-                    stabilizację trójosiową i ich orientacja jest aktywnie utrzymywana, prawdopodobnie przy użyciu
-                    zestawu
-                    kół
-                    reakcyjnych. Informacje o orientacji dostarczają szperacze gwiazd, bazujące na technologiach
-                    rozwiniętych w
-                    statku Dragon.
-                </p>
-            </div>
-            <div class="container">
-                <span class="title">Czas pracy</span>
-                <p>
-                    Każdy z satelitów jest zaprojektowany do pracy przez 5 lat. Pod koniec życia satelita wykorzysta
-                    swój
-                    napęd
-                    jonowy, aby zejść z orbity i spalić się w atmosferze w przeciągu kilku miesięcy. Jeżeli satelita
-                    doznałby
-                    uszkodzeń uniemożliwiających zmianę jego położenia, to w przeciągu 1-5 lat zejdzie z orbity na
-                    skutek
-                    oporów
-                    szczątkowej atmosfery na niskiej orbicie.
-                </p>
-            </div>
-            <div class="container">
-                <span class="title">Historia budowy sieci</span>
-                <p>
-                    Pierwszy operacyjny zestaw 60 satelitów (Starlink 1) został umieszczony na orbicie 11 listopada
-                    2019 r.
-                    Operacyjne satelity różniły się od serii v0.9 posiadaniem urządzeń do komunikacji w paśmie Ka,
-                    zwiększoną
-                    liczbą generowanych wiązek i przepustowością. Masa satelity zwiększyła się o 33 kg do 260 kg w
-                    stosunku
-                    do
-                    testowej serii.
-                </p>
-                <p>
-                    4 czerwca 2020 r. w ramach misji Starlink L7 na orbitę poleciał testowy satelita ze specjalną
-                    rozwijaną
-                    osłoną przeciwsłoneczną. Późniejsze paczki wysyłanych Starlinków są już wszystkie wyposażone w
-                    to
-                    rozwiązanie.
-                </p>
-            </div>
-        </div>
-    </div>
-    <footer id="footer">
-        <div id="footer_div">
-            Sebastian Regucki, 2022 ®
-        </div>
-    </footer>
-</body>
-<script>
-    const el = document.getElementById('cl');
-    console.log(el.offsetLeft);
-
-</script>
-
+        <footer id="footer">
+            <div id="footer_div">Sebastian Regucki, 2022 ®</div>
+        </footer>
+    </body>
 </html>

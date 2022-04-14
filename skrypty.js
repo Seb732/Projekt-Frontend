@@ -1,9 +1,7 @@
-
-
 $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if (scroll > 200) {
-        document.getElementById("navbar").style.cssText = `
+  var scroll = $(window).scrollTop();
+  if (scroll > 200) {
+    document.getElementById("navbar").style.cssText = `
             display: inline-flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -20,46 +18,44 @@ $(window).scroll(function (event) {
             animation: fadeInSide 1s;
 
             `;
-        document.getElementById("nav").style.cssText = ` 
+    document.getElementById("nav").style.cssText = ` 
             float:none;
             `;
-        document.getElementById("1").innerHTML = '<i class="fa fa-fw fa-rocket"></i>';
-        document.getElementById("2").innerHTML = '<i class="fa fa-fw fa-book">';
-        document.getElementById("3").innerHTML = '<i class="fa fa-fw fa-tasks"></i>';
-        document.getElementById("4").innerHTML = '<i class="fa fa-fw fa-line-chart"></i>';
-    }
-    else {
-        document.getElementById("navbar").style.cssText = `
+    document.getElementById("1").innerHTML =
+      '<i class="fa fa-fw fa-rocket"></i>';
+    document.getElementById("2").innerHTML = '<i class="fa fa-fw fa-book">';
+    document.getElementById("3").innerHTML =
+      '<i class="fa fa-fw fa-tasks"></i>';
+    document.getElementById("4").innerHTML =
+      '<i class="fa fa-fw fa-line-chart"></i>';
+  } else {
+    document.getElementById("navbar").style.cssText = `
             positon: relative;
             -webkit-animation: fadeIn 1s;
             animation: fadeIn 1s;
             `;
-        document.getElementById("nav").style.cssText = `
+    document.getElementById("nav").style.cssText = `
             float: right; `;
 
-        document.getElementById("1").innerHTML = 'Cel i funkcje';
-        document.getElementById("2").innerHTML = 'Historia';
-        document.getElementById("3").innerHTML = 'Obecnie';
-        document.getElementById("4").innerHTML = 'Plany';
-    }
-    
-    
+    document.getElementById("1").innerHTML = "Cel i funkcje";
+    document.getElementById("2").innerHTML = "Historia";
+    document.getElementById("3").innerHTML = "Obecnie";
+    document.getElementById("4").innerHTML = "Plany";
+  }
 });
-window.addEventListener('scroll', function() {
-	var element = document.querySelector('#footer');
+window.addEventListener("scroll", function () {
+  var element = document.querySelector("#footer");
 
-	var position = element.getBoundingClientRect();
+  var position = element.getBoundingClientRect();
 
-
-	if(position.top < window.innerHeight && position.bottom >= 0) {
-        document.getElementById("footer_div").style.cssText = `
+  if (position.top < window.innerHeight && position.bottom >= 0) {
+    document.getElementById("footer_div").style.cssText = `
         -webkit-animation: fadeIn 1s;
         animation: fadeIn 1s;
         `;
-	}
-    else{
-        document.getElementById("footer_div").style.cssText = `
+  } else {
+    document.getElementById("footer_div").style.cssText = `
         opacity:0;
         `;
-    }
+  }
 });
