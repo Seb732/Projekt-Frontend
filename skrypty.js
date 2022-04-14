@@ -10,6 +10,7 @@ $(window).scroll(function (event) {
             align-content: center;
             padding-left: 0;
             top: 40%;
+            left: 0;
             position: fixed;
             background-color: #212121;
             border-radius: 0 5px 5px 0;
@@ -63,37 +64,36 @@ window.addEventListener("scroll", function () {
 });
 
 $(document).ready(function () {
-  $("#1").click(function () {
-      $("html, body").animate(
-          {
-              scrollTop: $("#container1").offset().top - 100,
-          },
-          2000
-    );
-    
-  });
-  $("#2").click(function () {
-      $("html, body").animate(
-          {
-              scrollTop: $("#container2").offset().top - 100,
-          },
-          2000
-      );
-  });
-  $("#3").click(function () {
-      $("html, body").animate(
-          {
-              scrollTop: $("#container3").offset().top - 100,
-          },
-          2000
-      );
-  });
-  $("#4").click(function () {
-      $("html, body").animate(
-          {
-              scrollTop: $("#container4").offset().top - 100,
-          },
-          2000
-      );
-  });
+    $("#1").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: $("#container1").offset().top - 100,
+            },
+            2000
+        );
+    });
+    $("#2").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: $("#container2").offset().top - 100,
+            },
+            2000
+        );
+    });
+    $("#3").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: $("#container3").offset().top - 100,
+            },
+            2000
+        );
+    });
+    $("#4").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: $("#container4").offset().top - 100,
+            },
+            2000
+        );
+    });
 });

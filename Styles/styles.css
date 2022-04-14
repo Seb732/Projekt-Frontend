@@ -5,8 +5,6 @@
     --headerHeight: 10%;
 }
 
-
-
 @font-face {
     font-family: "Neue Haas Grotesk Display Pro";
     src: url("Fonts/NeueHaasDisplay-Light.woff") format("woff2"),
@@ -38,6 +36,9 @@ header {
     height: 80px;
     -webkit-animation: fadeIn 3s;
     animation: fadeIn 3s;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 footer {
@@ -171,7 +172,24 @@ a:focus::before {
     }
 }
 
+#logo_div {
+    grid-area: 1 / 1 / 2 / 2;
+    line-height: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 2s;
+}
+
+#logo_div:hover {
+    transform: rotate(1turn);
+}
+
 #nav_div {
+    grid-area: 1 / 2 / 2 / 3;
     padding-right: 10%;
 }
 
@@ -238,6 +256,8 @@ a:focus::before {
     grid-template-rows: 0.2fr 0.8fr;
     margin-bottom: 10%;
     margin-top: 12%;
+    border-bottom: solid 1px black;
+
 }
 #container_list_title {
     grid-area: 1 / 1 / 2 / 2;
@@ -263,6 +283,7 @@ a:focus::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: solid 1px black;
 }
 
 #info_source {
