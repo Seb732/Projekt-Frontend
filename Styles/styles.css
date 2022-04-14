@@ -5,6 +5,8 @@
     --headerHeight: 10%;
 }
 
+
+
 @font-face {
     font-family: "Neue Haas Grotesk Display Pro";
     src: url("Fonts/NeueHaasDisplay-Light.woff") format("woff2"),
@@ -14,6 +16,7 @@
 body {
     margin: 0;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 header {
@@ -32,6 +35,9 @@ header {
     box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
     font-size: 14px;
     font-weight: 900;
+    height: 80px;
+    -webkit-animation: fadeIn 3s;
+    animation: fadeIn 3s;
 }
 
 footer {
@@ -55,10 +61,9 @@ footer {
     margin-top: 5%;
 }
 
-table{
-  border-spacing: 15px 10px;
+table {
+    border-spacing: 15px 10px;
 }
-
 
 caption {
     margin-bottom: 2%;
@@ -66,13 +71,12 @@ caption {
 }
 
 th {
-  color: #000;
+    color: #000;
     border-bottom: solid 2px var(--indicator_color);
 }
-td{
-  text-align: center;
+td {
+    text-align: center;
 }
-
 
 p {
     padding-bottom: 5%;
@@ -88,12 +92,12 @@ nav > ul > li {
     vertical-align: middle;
 }
 
-nav > ul > li > a:focus,
+a:focus,
 a:active {
     text-decoration: none;
 }
 
-nav > ul > li > a {
+a {
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
     position: relative;
@@ -107,7 +111,7 @@ nav > ul > li > a {
     color: #fff;
 }
 
-nav > ul > li > a::before {
+a::before {
     content: "";
     display: block;
     position: absolute;
@@ -121,7 +125,7 @@ nav > ul > li > a::before {
     transition: color 0.1s, transform 0.2s ease-out;
 }
 
-nav > ul > li > a:hover::before,
+a:hover::before,
 a:focus::before {
     transform-origin: left top;
     transform: scale(1, 1);
@@ -235,15 +239,14 @@ a:focus::before {
     margin-bottom: 10%;
     margin-top: 12%;
 }
-#container_list_title{
+#container_list_title {
     grid-area: 1 / 1 / 2 / 2;
-    
 }
-#container_list_content{
+#container_list_content {
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr
+    grid-template-rows: 1fr;
 }
 #container_list1 {
     display: flex;
@@ -256,17 +259,97 @@ a:focus::before {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-
 #container_table {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#info_source{
-  margin-top: 5%;
+#info_source {
+    margin-top: 5%;
 }
 
-#container4{
-  padding-bottom: 6px;
+#container4 {
+    padding-bottom: 6px;
+}
+
+.container img {
+    box-shadow: 10px 10px 5px rgba(255, 255, 255, 0.384);
+    -moz-box-shadow: 10px 10px 5px rgba(255, 255, 255, 0.384);
+    -webkit-box-shadow: 10px 10px 5px rgba(255, 255, 255, 0.384);
+    -khtml-box-shadow: 10px 10px 5px rgba(255, 255, 255, 0.384);
+    border-radius: 25px;
+    max-width: 500px;
+    width: 80%;
+    border: solid 7px rgb(128, 128, 128);
+}
+.container_img {
+    border: solid 7px rgb(128, 128, 128);
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 10px,
+        rgba(0, 0, 0, 0.3) 10px,
+        rgba(0, 0, 0, 0.3) 20px
+    );
+    border-radius: 30px;
+    padding: 5% 0 0 0;
+    margin: 7% 9% 7% 9%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.9fr 0.1fr;
+    row-gap: 15px;
+}
+.container_img_img {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_img_src {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+a > span {
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+#container3_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+}
+#container3_text {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container3_img {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#landing_page {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+}
+#lp_text {
+    font-family: var(--font_family_main);
+    font-size: 72px;
+    color: rgba(255, 255, 255, 0.897);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: fadeIn 3s;
+    animation: fadeIn 3s;
 }
