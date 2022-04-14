@@ -257,7 +257,6 @@ a:focus::before {
     margin-bottom: 10%;
     margin-top: 12%;
     border-bottom: solid 1px black;
-
 }
 #container_list_title {
     grid-area: 1 / 1 / 2 / 2;
@@ -374,3 +373,27 @@ a > span {
     -webkit-animation: fadeIn 3s;
     animation: fadeIn 3s;
 }
+@media only screen and (min-width: 850px) {
+    #logo {
+        display: none;
+    }
+    #logoTxt {
+        display: block;
+    }
+}
+@media only screen and (max-width: 850px) {
+    #logo {
+        display: block;
+        height: 50px;
+    }
+    #logoTxt {
+        display: none;
+    }
+    #logo_div {
+        padding-top: 4%;
+        align-items: flex-start;
+    }
+}
+
+
+

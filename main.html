@@ -12,9 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="skrypty.js"></script>
         <link rel="stylesheet" href="Styles/styles.css" />
-        <script>
-            
-        </script>
+        <script></script>
     </head>
 
     <body>
@@ -25,9 +23,15 @@
         />
         <span id="lp_text">Satelity Starlink</span>
         <header>
-			<div id="logo_div">
-				Satelity starlink
-			</div>
+            <div id="logo_div">
+                <img
+                    src="Images/logo_x_white.png"
+                    alt="Logo"
+                    height="60"
+                    id="logo"
+                />
+                <span id="logoTxt">Satelity Starlink</span>
+            </div>
             <div id="nav_div">
                 <nav id="nav">
                     <ul id="navbar">
@@ -218,5 +222,29 @@
         <footer id="footer">
             <div id="footer_div">Sebastian Regucki, 2022 ®</div>
         </footer>
+        <script>
+            const mediaQuery = window.matchMedia("(max-width: 670px)");
+            function handleTabletChange(e) {
+                if (e.matches) {
+                    document.getElementById("1").innerHTML =
+                        '<i class="fa fa-fw fa-rocket"></i>';
+                    document.getElementById("2").innerHTML =
+                        '<i class="fa fa-fw fa-book">';
+                    document.getElementById("3").innerHTML =
+                        '<i class="fa fa-fw fa-tasks"></i>';
+                    document.getElementById("4").innerHTML =
+                        '<i class="fa fa-fw fa-line-chart"></i>';
+                } else {
+                    document.getElementById("1").innerHTML = "Cel i funkcje";
+                    document.getElementById("2").innerHTML = "Historia";
+                    document.getElementById("3").innerHTML = "Obecnie";
+                    document.getElementById("4").innerHTML = "Plany";
+                }
+            }
+
+            mediaQuery.addListener(handleTabletChange);
+
+            handleTabletChange(mediaQuery);
+        </script>
     </body>
 </html>

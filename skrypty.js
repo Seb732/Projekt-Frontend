@@ -1,5 +1,6 @@
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
+    var wd = window.innerWidth;
     if (scroll > 800) {
         document.getElementById("navbar").style.cssText = `
             display: inline-flex;
@@ -45,6 +46,15 @@ $(window).scroll(function (event) {
         document.getElementById("3").innerHTML = "Obecnie";
         document.getElementById("4").innerHTML = "Plany";
     }
+    if (scroll <= 800 && wd < 670) {
+        document.getElementById("1").innerHTML =
+            '<i class="fa fa-fw fa-rocket"></i>';
+        document.getElementById("2").innerHTML = '<i class="fa fa-fw fa-book">';
+        document.getElementById("3").innerHTML =
+            '<i class="fa fa-fw fa-tasks"></i>';
+        document.getElementById("4").innerHTML =
+            '<i class="fa fa-fw fa-line-chart"></i>';
+    } 
 });
 window.addEventListener("scroll", function () {
     var element = document.querySelector("#footer");
