@@ -21,7 +21,7 @@ $(window).scroll(function (event) {
         document.getElementById("nav").style.cssText = ` 
             float:none;
             `;
-            
+
         document.getElementById("1").innerHTML =
             '<i class="fa fa-fw fa-rocket"></i>';
         document.getElementById("2").innerHTML = '<i class="fa fa-fw fa-book">';
@@ -35,7 +35,7 @@ $(window).scroll(function (event) {
             -webkit-animation: fadeIn 1s;
             animation: fadeIn 1s;
             `;
-        
+
         document.getElementById("nav").style.cssText = `
             float: right; `;
 
@@ -60,4 +60,40 @@ window.addEventListener("scroll", function () {
         opacity:0;
         `;
     }
+});
+
+$(document).ready(function () {
+  $("#1").click(function () {
+      $("html, body").animate(
+          {
+              scrollTop: $("#container1").offset().top - 100,
+          },
+          2000
+    );
+    
+  });
+  $("#2").click(function () {
+      $("html, body").animate(
+          {
+              scrollTop: $("#container2").offset().top - 100,
+          },
+          2000
+      );
+  });
+  $("#3").click(function () {
+      $("html, body").animate(
+          {
+              scrollTop: $("#container3").offset().top - 100,
+          },
+          2000
+      );
+  });
+  $("#4").click(function () {
+      $("html, body").animate(
+          {
+              scrollTop: $("#container4").offset().top - 100,
+          },
+          2000
+      );
+  });
 });
