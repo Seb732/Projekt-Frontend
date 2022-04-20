@@ -27,13 +27,10 @@ header {
     background-color: var(--header_footer_bg);
     color: #fff;
     font-family: var(--font_family_main);
-    font-weight: 300;
     font-style: normal;
-    font-display: swap;
     box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
     font-size: 14px;
     font-weight: 900;
-    height: 80px;
     -webkit-animation: fadeIn 3s;
     animation: fadeIn 3s;
     display: grid;
@@ -54,7 +51,7 @@ footer {
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
-    box-shadow: 0px -2px 4px 0px rgba(0 0 0 / 50%);
+    box-shadow: 0 -2px 4px 0 rgba(0 0 0 / 50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +97,6 @@ a:active {
 
 a {
     text-decoration: none;
-    transition: color 0.1s, background-color 0.1s;
     position: relative;
     display: block;
     padding: 16px 0;
